@@ -55,7 +55,7 @@ def click():
   postdata = request.body.read()
   print(postdata)
   xy = request.forms.get('button')
-  m = re.match('(\d+),(\d+)',xy)
+  m = re.match('(\d+),(\d+)',xy) #da go prekucam so split()
   if m is None:
     return table_view()
 

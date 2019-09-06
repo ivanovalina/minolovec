@@ -1,4 +1,4 @@
-<h1>Hello</h1>
+<h1>Choose field</h1>
 <br />
 % if table.is_gameover:
 <h2>Game over!</h2>
@@ -21,6 +21,8 @@
 %     end
 %   end
   <br />
+
 % end
 </form>
+<a href = '/'> New game </a>
 
