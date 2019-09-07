@@ -55,13 +55,14 @@ def click():
   postdata = request.body.read()
   print(postdata)
   xy = request.forms.get('button')
-  m = re.match('(\d+),(\d+)',xy) #da go prekucam so split()
-  if m is None:
-    return table_view()
 
-  x = int(m.group(1))
-  y = int(m.group(2))
+  for position in xy.split(","):
+    if position is None:
+      return  table_view()
+  x = int(xy.split(",")[0])
+  y = int(xy.split(",")[1])
 
+  
   t.open_xy(x,y)
   s['table'] = t
   s.save()
